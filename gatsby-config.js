@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "cfc",
+    title: "Club Fun Coin",
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -19,6 +19,14 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pages",
+        path: "./src/pages/",
+      },
+      __key: "pages",
     },
   ],
 };
