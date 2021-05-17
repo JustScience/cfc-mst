@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from "styled-components"
-import Button from "./button"
 import logo from "../images/logo-big.png"
 import sky from "../images/hero-sky.jpg"
 
@@ -16,19 +15,35 @@ const HeroWrap = styled.section`
 `
 const Contain = styled.div`
     margin: 0 auto;
+    max-width: 1080px;
 `
 const CallToAction = styled.div`
     margin: 0 auto;
+    text-align: center;
 `
-
 const Frame = styled.div`
-    width: 300px;
+    max-width: 360px;
     margin: 0 auto;
 `
 const Picture = styled.img`
     width: 100%;
     max-width: 100%;
 `
+const Button = styled.a`
+	border: 3px solid #bada55;
+	border-radius: 10px;
+	color: cyan;
+	cursor: pointer;
+    font-size: 1.2em;
+	margin: 0;
+	padding: 8px 20px;
+	transition: all 360ms ease-in-out;
+
+	&:hover {
+        border-color: magenta;
+		color: #bada55;
+	}
+`;
 
 export default function Hero() {
     return (
@@ -41,7 +56,7 @@ export default function Hero() {
                     />
                 </Frame>
                 <CallToAction>
-                    <a href="https://exchange.pancakeswap.finance/#/swap" target="_blank" rel="noreferrer"><Button label="BUY CFC" /></a>
+                    <Button href="https://exchange.pancakeswap.finance/#/swap" target="_blank" rel="noreferrer">BUY CFC</Button>
                 </CallToAction>
             </Contain>
         </HeroWrap>

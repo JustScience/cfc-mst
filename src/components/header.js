@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
 import icon from "../images/icon.png"
-import Button from "./button"
 
 const HeaderWrap = styled.header`
   background-image: linear-gradient(rgba(0,0,0,1.0),rgba(0,0,0,0.0));
@@ -73,6 +72,23 @@ const NavLink = styled.button`
     color: pink;
   }
 `
+const Button = styled.a`
+	border: 3px solid #bada55;
+	border-radius: 10px;
+	color: cyan;
+	cursor: pointer;
+  font-size: 1em;
+	margin: 0;
+	outline: none;
+	padding: 8px 20px;
+	transition: all 360ms ease-in-out;
+
+	&:hover {
+    border-color: magenta;
+		border-radius: 10px;
+		color: #bada55;
+	}
+`;
 
 export default function Header() {
     return (
@@ -82,7 +98,7 @@ export default function Header() {
                 <HeaderLogoImg src={icon}/>
                 <HeaderLogoText>Club<span>Fun</span>Coin</HeaderLogoText>
               </HeaderLogo>
-              <a href="https://exchange.pancakeswap.finance/#/swap" target="_blank" rel="noreferrer"><Button label="BUY CFC" /></a>
+              <Button href="https://exchange.pancakeswap.finance/#/swap" target="_blank" rel="noreferrer">BUY CFC</Button>
             </HeaderTop>
             <HeaderBottom>
               <Nav>
