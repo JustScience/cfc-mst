@@ -1,8 +1,17 @@
 import React from 'react'
 import styled from 'styled-components';
+import ground from "../images/hero-ground.jpg"
 
-const FooterWrap = styled.footer`
-    background-color: black;
+const FooterWrap = styled.section`
+    background-image: url(${ground});
+    background-position: center top;
+    background-repeat: none;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 12px 36px;
     width: 100%;
 `
 const Copyright = styled.p`

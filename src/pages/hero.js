@@ -5,7 +5,7 @@ import sky from "../images/hero-sky.jpg"
 
 const HeroWrap = styled.section`
     background-image: url(${sky});
-    background-position: center;
+    background-position: center bottom;
     background-repeat: none;
     background-size: cover;
     height: 100%;

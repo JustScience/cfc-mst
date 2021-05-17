@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
-import wall from "../images/brick-wall.jpg"
+import sky from "../images/hero-sky.jpg"
 
 const ContactWrap = styled.section`
-    background-image: url(${wall});
-    background-position: center top;
+    background-image: url(${sky});
+    background-position: center bottom;
     background-repeat: none;
     background-size: cover;
     display: flex;
