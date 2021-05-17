@@ -32,14 +32,51 @@ const ContractID = styled.p`
 
     span {color: magenta;}
 `
+const Frame = styled.div`
+    margin: 0 auto;
+    width: 240px;
+`
+const Picture = styled.img`
+    width: 100%;
+    max-width: 100%;
+`
+const CallToAction = styled.div`
+    margin: 0 auto;
+    text-align: center;
+`
+const Button = styled.a`
+	border: 3px solid #bada55;
+	border-radius: 10px;
+	color: cyan;
+	cursor: pointer;
+    font-size: 1.2em;
+	margin: 0;
+	padding: 8px 20px;
+	transition: all 360ms ease-in-out;
+
+	&:hover {
+        border-color: magenta;
+		color: #bada55;
+	}
+`;
+
 
 export default function Buy() {
     return (
         <BuyWrap>
             <SectionTitle>How to Buy</SectionTitle>
+            <Frame>
+                <Picture
+                    alt="Pancake Swap"
+                    src={pancake}
+                />
+            </Frame>
             <ContractID>CFC Coin Address:<br />
             <span>0xb3e2619dC65530585D1dC2F3CCbcce0fDE9e2EE9</span></ContractID>
             {/* <video videoSrcUrl={kucoin} /> */}
+            <CallToAction>
+                <Button href="https://exchange.pancakeswap.finance/#/swap" target="_blank" rel="noreferrer">Buy on PancakeSwap</Button>
+            </CallToAction>
         </BuyWrap>
     )
 }
