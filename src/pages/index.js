@@ -12,6 +12,7 @@ import Feature from "./feature"
 import About from "./about"
 import Roadmap from "./roadmap"
 import Tokenomics from "./tokenomics"
+import Founder from "./founder"
 import Contact from "./contact"
 
 // styles
@@ -33,8 +34,9 @@ const IndexPage = () => {
       </Fullscreen>
 
       <About />
-      <Roadmap />
       <Tokenomics />
+      <Roadmap />
+      <Founder />
       <Contact />
 
       <Footer />

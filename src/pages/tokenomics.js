@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
+import media from "../components/media"
 import Icon from "../components/icon"
 
 const TokenomicsWrap = styled.section `
@@ -21,14 +22,19 @@ const SectionTitle = styled.h3`
     padding: 0;
     text-align: center;
 `
-const List = styled.ul`
+const List = styled.div`
     list-style: none;
     margin: 0 auto;
-    /* padding: 0; */
-`
-const ListItem = styled.ul`
-    margin: 0;
     padding: 0;
+    ${media.tablet`
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    `};
+`
+const ListItem = styled.div`
+    margin: 0 auto;
+    padding: 0 24px;
 
     span {color: magenta;font-size: 1.5em;line-height:1.5;}
 `
@@ -72,12 +78,12 @@ export default function Tokenomics() {
                     <span> 200,000,000,000</span>
                 </MetricTag>
             </ListItem>
-            <ListItem>
-                <MetricTag>
-                    Locked Liquidity Pool: 
+            {/* <ListItem> */}
+                {/* <MetricTag> */}
+                    {/* Locked Liquidity Pool:  */}
                     {/* <span>$30,280</span> */}
-                </MetricTag>
-            </ListItem>
+                {/* </MetricTag> */}
+            {/* </ListItem> */}
             </List>
         </TokenomicsWrap>
     )

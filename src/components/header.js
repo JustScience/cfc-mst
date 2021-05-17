@@ -106,13 +106,13 @@ export default function Header() {
             </HeaderTop>
             <HeaderBottom>
               <Nav>
-                <NavLink type="button" onclick="document.getElementById('money').scrollIntoView({behavior:'smooth'})">About</NavLink>
-                <NavLink type="button" onclick="document.getElementById('vibes').scrollIntoView({behavior:'smooth'})">Buy</NavLink>
+                {/* <NavLink type="button" onclick="document.getElementById('money').scrollIntoView({behavior:'smooth'})">About</NavLink> */}
+                {/* <NavLink type="button" onclick="document.getElementById('vibes').scrollIntoView({behavior:'smooth'})">Buy</NavLink> */}
                 {/* <NavLink type="button" onclick="document.getElementById('money').scrollIntoView({behavior:'smooth'})">Links</NavLink> */}
-                <NavLink type="button" onclick="document.getElementById('vibes').scrollIntoView({behavior:'smooth'})">Tokenomics</NavLink>
-                <NavLink type="button" onclick="document.getElementById('vibes').scrollIntoView({behavior:'smooth'})">Roadmap</NavLink>
-                <NavLink type="button" onclick="document.getElementById('vibes').scrollIntoView({behavior:'smooth'})">Founder</NavLink>
-                <NavLink type="button" onclick="document.getElementById('vibes').scrollIntoView({behavior:'smooth'})">Contact</NavLink>
+                {/* <NavLink type="button" onclick="document.getElementById('vibes').scrollIntoView({behavior:'smooth'})">Tokenomics</NavLink> */}
+                {/* <NavLink type="button" onclick="document.getElementById('vibes').scrollIntoView({behavior:'smooth'})">Roadmap</NavLink> */}
+                {/* <NavLink type="button" onclick="document.getElementById('vibes').scrollIntoView({behavior:'smooth'})">Founder</NavLink> */}
+                {/* <NavLink type="button" onclick="document.getElementById('vibes').scrollIntoView({behavior:'smooth'})">Contact</NavLink> */}
               </Nav>
             </HeaderBottom>
         </HeaderWrap>
