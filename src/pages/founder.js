@@ -24,9 +24,12 @@ const FounderWrap = styled.section`
 `
 const SectionImage = styled.div`
     height: 420px;
-    margin: 0 24px 0 0;
+    margin: 0 auto;
     padding: 12px;
     width: 420px;
+    ${media.tablet`
+        margin: 0 24px 0 0;
+    `};
 `
 const SectionInfoWrap = styled.div`
     display: flex;
