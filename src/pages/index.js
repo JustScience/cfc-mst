@@ -42,7 +42,7 @@ const IndexPage = () => {
       <Contact />
 
       <Footer />
-      <ResponsiveGuide />
+      {/* <ResponsiveGuide /> */}
     </Page>
   )
 }

@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from "styled-components"
 // import media from "../components/media"
+
+import pancake from "../images/pancakeswap.png"
 // import binance from "../videos/binance-metamask.mp4"
 // import kucoin from "../videos/kucoin-trust.mp4"
 
