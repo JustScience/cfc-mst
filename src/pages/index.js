@@ -10,6 +10,7 @@ import ResponsiveGuide from "../components/responsive-guide"
 import Hero from "./hero"
 import Feature from "./feature"
 import About from "./about"
+import Buy from "./buy"
 import Roadmap from "./roadmap"
 import Tokenomics from "./tokenomics"
 import Founder from "./founder"
@@ -34,6 +35,7 @@ const IndexPage = () => {
       </Fullscreen>
 
       <About />
+      <Buy />
       <Tokenomics />
       <Roadmap />
       <Founder />
