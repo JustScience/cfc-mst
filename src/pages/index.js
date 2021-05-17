@@ -5,6 +5,7 @@ import "../styles/global.css"
 import Fullscreen from "../components/fullscreen"
 import Header from "../components/header"
 import Footer from "../components/footer"
+import ResponsiveGuide from "../components/responsive-guide"
 
 import Hero from "./hero"
 import Feature from "./feature"
@@ -37,6 +38,7 @@ const IndexPage = () => {
       <Contact />
 
       <Footer />
+      <ResponsiveGuide />
     </Page>
   )
 }

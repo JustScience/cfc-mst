@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
+import Icon from "../components/icon"
 
 const TokenomicsWrap = styled.section `
     background-position: center;
@@ -31,17 +32,52 @@ const ListItem = styled.ul`
 
     span {color: magenta;font-size: 1.5em;line-height:1.5;}
 `
+const MetricTag = styled.div`
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+`
 
 export default function Tokenomics() {
     return (
         <TokenomicsWrap>
             <SectionTitle>Tokenomics</SectionTitle>
             <List>
-            <ListItem>Current Price: <span>$0.0000248551</span></ListItem>
-            <ListItem>Market Cap: <span>$4,975,000</span></ListItem>
-            <ListItem>Holders: <span>500+</span></ListItem>
-            <ListItem>Supply: <span>200,000,000,000</span></ListItem>
-            <ListItem>Locked Liquidity Pool: <span>$30,280</span></ListItem>
+            <ListItem>
+                <MetricTag>
+                    <Icon shape="tag" color="cyan" size="90px" />
+                    Current Price: 
+                    <span> $0.0000248551</span>
+                </MetricTag>
+            </ListItem>
+            <ListItem>
+                <MetricTag>
+                    <Icon shape="wallet" color="cyan" size="90px" />
+                    Market Cap: 
+                    <span> $4,975,000</span>
+                </MetricTag>
+            </ListItem>
+            <ListItem>
+                <MetricTag>
+                    <Icon shape="group" color="cyan" size="90px" />
+                    Holders: 
+                    <span> 500+</span>
+                </MetricTag>
+            </ListItem>
+            <ListItem>
+                <MetricTag>
+                    <Icon shape="infinity" color="cyan" size="90px" />
+                    Supply: 
+                    <span> 200,000,000,000</span>
+                </MetricTag>
+            </ListItem>
+            <ListItem>
+                <MetricTag>
+                    Locked Liquidity Pool: 
+                    {/* <span>$30,280</span> */}
+                </MetricTag>
+            </ListItem>
             </List>
         </TokenomicsWrap>
     )

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import icon from "../images/icon.png"
+import media from "../components/media"
 
 const HeaderWrap = styled.header`
   background-image: linear-gradient(rgba(0,0,0,1.0),rgba(0,0,0,0.0));
@@ -43,7 +44,10 @@ const HeaderLogoImg = styled.img`
 `
 const HeaderLogoText = styled.span`
   display: flex;
-  font-size: 2em;
+  font-size: 1.5em;
+  ${media.tabletSM`
+    font-size: 2em;
+  `};
   span {
     color: magenta;
   }
