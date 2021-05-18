@@ -3,6 +3,7 @@ import styled from "styled-components"
 import media from "../components/media"
 
 import pancake from "../images/pancakeswap.png"
+import buy from "../images/buy.jpg"
 import binance from "../videos/binance-metamask.mp4"
 import kucoin from "../videos/kucoin-trust.mp4"
 
@@ -36,6 +37,10 @@ const Frame = styled.div`
     margin: 0 auto;
     width: 240px;
 `
+const BigFrame = styled.div`
+    margin: 0 auto;
+    max-width: 480px;
+`
 const Picture = styled.img`
     width: 100%;
     max-width: 100%;
@@ -61,7 +66,7 @@ const Button = styled.a`
 `;
 const Video = styled.video`
     margin: 0 auto;
-    width: 360px;
+    width: 300px;
 `
 const Tutorials = styled.div`
     display: flex;
@@ -102,6 +107,12 @@ export default function Buy() {
                     <Video width="540px" controls><source src={binance} type="video/mp4" /></Video>
                 </TutorialWrap>
             </Tutorials>
+            <BigFrame>
+                <Picture
+                    alt="Buy CFC on Mobile"
+                    src={buy}
+                />
+            </BigFrame>
         </BuyWrap>
     )
 }

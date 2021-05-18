@@ -14,6 +14,7 @@ import Buy from "./buy"
 import Roadmap from "./roadmap"
 import Tokenomics from "./tokenomics"
 import Founder from "./founder"
+import CoFounder from "./cofounder"
 import Contact from "./contact"
 
 // styles
@@ -39,6 +40,7 @@ const IndexPage = () => {
       <Tokenomics />
       <Roadmap />
       <Founder />
+      <CoFounder />
       <Contact />
 
       <Footer />
