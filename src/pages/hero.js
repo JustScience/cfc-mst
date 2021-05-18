@@ -56,7 +56,7 @@ export default function Hero() {
                     />
                 </Frame>
                 <CallToAction>
-                    <Button href="https://exchange.pancakeswap.finance/#/swap" target="_blank" rel="noreferrer">BUY CFC</Button>
+                    <Button href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xb3e2619dC65530585D1dC2F3CCbcce0fDE9e2EE9" target="_blank" rel="noreferrer">BUY CFC</Button>
                 </CallToAction>
             </Contain>
         </HeroWrap>

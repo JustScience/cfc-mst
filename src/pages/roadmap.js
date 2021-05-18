@@ -50,7 +50,7 @@ export default function Roadmap() {
                                 <ListItem>-- Music Industry Related</ListItem>
                             </List>
                         </ListItem>
-                        <ListItem>First Donation Livestream - 30 May 2021</ListItem>
+                        <ListItem>First Donation Livestream</ListItem>
                     </List>
                 </ListItem>
                 <ListItem><span>June</span>
@@ -62,8 +62,8 @@ export default function Roadmap() {
                                 <ListItem>-- Music Industry Related</ListItem>
                             </List>
                         </ListItem>
-                        <ListItem>Second Donation Livestream - 13 June 2021</ListItem>
-                        <ListItem>Third Donation Livestream - 27 June 2021</ListItem>
+                        <ListItem>Second Donation Livestream</ListItem>
+                        <ListItem>Third Donation Livestream</ListItem>
                     </List>
                 </ListItem>
                 <ListItem><span>TBD</span>

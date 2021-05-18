@@ -24,12 +24,15 @@ const FounderWrap = styled.section`
     `};
 `
 const SectionImage = styled.div`
-    height: 420px;
+    /* height: 300px; */
     margin: 0 auto;
     padding: 12px;
-    width: 420px;
+    width: 100%;
+    max-width: 420px;
     ${media.tablet`
+        height: 420px;
         margin: 0 24px 0 0;
+        width: 420px;
     `};
 `
 const SectionInfoWrap = styled.div`
@@ -48,7 +51,7 @@ const SectionTitle = styled.h3`
     padding: 0;
     text-align: center;
     ${media.tablet`
-        text-align: left;;
+        text-align: left;
     `};
 `
 const Text = styled.p`
@@ -57,7 +60,7 @@ const Text = styled.p`
     text-align: center;
     text-shadow: 1px 4px 4px rgba(0,0,0,0.9);
     ${media.tablet`
-        text-align: left;;
+        text-align: left;
     `};
 
     strong {color:white;}
@@ -104,7 +107,7 @@ export default function Founder() {
             <SectionInfoWrap>
                 <SectionTitle>CFC Founder</SectionTitle>
                 <Text>
-                    <strong>Club<span>Fun</span>Coin</strong> was envisioned and started by Jessie Grundy, a Bay Area entrepreneur with years of experience growing businesses from the ground up. Most notably, his luxury cannabis brand Peakz, which has been featured in Forbes Magazine twice in the last three years. Peakz is also one of the largest social equity brands in the country. Jessie also transitioned these skills into a new space, developing a first of its kind surrounding the world of NFTs. A bag of cannabis, that exists only online, linked to blockchain technology. Tokened “Lava Coin,” the digital bag is available anywhere in the world, and it’s also legal anywhere in the world. As well, if you are based in Oregon or California, you can actually get “real” marijuana for owning Lava Coin. Jessie has also continually been an active mentor to aspiring minority business owners in the Bay Area. 
+                    <strong>Club<span>Fun</span>Coin</strong> was envisioned and started by <strong>Jessie Grundy</strong>, a Bay Area entrepreneur with years of experience growing businesses from the ground up. Most notably, his luxury cannabis brand Peakz, which has been featured in Forbes Magazine twice in the last three years. Peakz is also one of the largest social equity brands in the country. Jessie also transitioned these skills into a new space, developing a first of its kind surrounding the world of NFTs. A bag of cannabis, that exists only online, linked to blockchain technology. Tokened “Lava Coin,” the digital bag is available anywhere in the world, and it’s also legal anywhere in the world. As well, if you are based in Oregon or California, you can actually get “real” marijuana for owning Lava Coin. Jessie has also continually been an active mentor to aspiring minority business owners in the Bay Area. 
                 </Text>
                 <Button href="https://www.forbes.com/sites/chrisroberts/2021/03/01/would-you-buy-digital-marijuana-blockchain-based-nfts-arrive-in-cannabis/?sh=36e07e1b30a3" target="_blank" >Jessy Grundy Forbes Interview</Button>
             </SectionInfoWrap>

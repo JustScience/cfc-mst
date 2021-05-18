@@ -22,12 +22,15 @@ const CoFounderWrap = styled.section`
     `};
 `
 const SectionImage = styled.div`
-    height: 360px;
+    /* height: 300px; */
     margin: 0 auto;
     padding: 12px;
-    width: 360px;
+    width: 100%;
+    max-width: 300px;
     ${media.tablet`
+        height: 360px;
         margin: 0 24px 0 0;
+        width: 360px;
     `};
 `
 const SectionInfoWrap = styled.div`
@@ -46,7 +49,7 @@ const SectionTitle = styled.h3`
     padding: 0;
     text-align: center;
     ${media.tablet`
-        text-align: left;;
+        text-align: left;
     `};
 `
 const Text = styled.p`
@@ -55,7 +58,7 @@ const Text = styled.p`
     text-align: center;
     text-shadow: 1px 4px 4px rgba(0,0,0,0.9);
     ${media.tablet`
-        text-align: left;;
+        text-align: left;
     `};
 
     strong {color:white;}
@@ -84,7 +87,7 @@ export default function CoFounder() {
             <SectionInfoWrap>
                 <SectionTitle>Founding Member</SectionTitle>
                 <Text>
-                    Timothy Demry aka Blockchain T, An optimistic Bay Area native and crypto currency enthusiast. Blockchain T was raised in a single parent household and became the first in his family to graduate college. Teach for America alumni, Timothy has a heavy background in Real Estate & Crypto currency. Everyday he craves new challenges within Real Estate & Crypto, while pursuing a higher level of knowledge. Timothy is driven by the love for urban communities as well as his own family & hobbies. 
+                    <strong>Timothy Demry</strong> aka Blockchain T, An optimistic Bay Area native and crypto currency enthusiast. Blockchain T was raised in a single parent household and became the first in his family to graduate college. Teach for America alumni, Timothy has a heavy background in Real Estate & Crypto currency. Everyday he craves new challenges within Real Estate & Crypto, while pursuing a higher level of knowledge. Timothy is driven by the love for urban communities as well as his own family & hobbies. 
                 </Text>
             </SectionInfoWrap>
         </CoFounderWrap>

@@ -28,8 +28,20 @@ const SectionTitle = styled.h3`
 `
 const ContractID = styled.p`
     color: white;
-    text-align: center;
     margin: 24px auto;
+    text-align: center;
+    font-size: 0.9em;
+    ${media.tablet`
+        font-size: 1.5em;
+    `};
+
+    span {color: magenta;}
+`
+const TutorialTitle = styled.p`
+    color: white;
+    margin: 24px auto;
+    text-align: center;
+    font-size: 1em;
 
     span {color: magenta;}
 `
@@ -92,18 +104,18 @@ export default function Buy() {
                     src={pancake}
                 />
             </Frame>
-            <ContractID>CFC Coin Address:<br />
+            <ContractID>CFC Contract Address:<br />
             <span>0xb3e2619dC65530585D1dC2F3CCbcce0fDE9e2EE9</span></ContractID>
             <CallToAction>
-                <Button href="https://exchange.pancakeswap.finance/#/swap" target="_blank" rel="noreferrer">Buy on PancakeSwap</Button>
+                <Button href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xb3e2619dC65530585D1dC2F3CCbcce0fDE9e2EE9" target="_blank" rel="noreferrer">Buy on PancakeSwap</Button>
             </CallToAction>
             <Tutorials>
                 <TutorialWrap>
-                    <ContractID>KuCoin Dex to Trust Wallet</ContractID>
+                    <TutorialTitle>KuCoin Dex to Trust Wallet</TutorialTitle>
                     <Video width="540px" controls><source src={kucoin} type="video/mp4" /></Video>
                 </TutorialWrap>
                 <TutorialWrap>
-                    <ContractID>Binance Dex to Metamask Wallet</ContractID>
+                    <TutorialTitle>Binance Dex to Metamask Wallet</TutorialTitle>
                     <Video width="540px" controls><source src={binance} type="video/mp4" /></Video>
                 </TutorialWrap>
             </Tutorials>
