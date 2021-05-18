@@ -101,12 +101,15 @@ export default function Founder() {
                 </Frame>
             </SectionImage>
             <SectionInfoWrap>
-                <SectionTitle>CFC Founder</SectionTitle>
+                <SectionTitle>Founding Team</SectionTitle>
                 <Text>
                     <strong>Club<span>Fun</span>Coin</strong> was envisioned and started by Jessie Grundy, a Bay Area entrepreneur with years of experience growing businesses from the ground up. Most notably, his luxury cannabis brand Peakz, which has been featured in Forbes Magazine twice in the last three years. Peakz is also one of the largest social equity brands in the country. Jessie also transitioned these skills into a new space, developing a first of its kind surrounding the world of NFTs. A bag of cannabis, that exists only online, linked to blockchain technology. Tokened “Lava Coin,” the digital bag is available anywhere in the world, and it’s also legal anywhere in the world. As well, if you are based in Oregon or California, you can actually get “real” marijuana for owning Lava Coin. Jessie has also continually been an active mentor to aspiring minority business owners in the Bay Area. 
                 </Text>
                 <Button href="https://www.forbes.com/sites/chrisroberts/2021/03/01/would-you-buy-digital-marijuana-blockchain-based-nfts-arrive-in-cannabis/?sh=36e07e1b30a3" target="_blank" >Jessy Grundy Forbes Interview</Button>
             </SectionInfoWrap>
+            <Text>Notable Founding Member:
+Timothy Demry aka Blockchain T, An optimistic Bay Area native and crypto currency enthusiast. Blockchain T was raised in a single parent household and became the first in his family to graduate college. Teach for America alumni, Timothy has a heavy background in Real Estate & Crypto currency. Everyday he craves new challenges within Real Estate & Crypto, while pursuing a higher level of knowledge. Timothy is driven by the love for urban communities as well as his own family & hobbies. 
+</Text>
         </FounderWrap>
     )
 }

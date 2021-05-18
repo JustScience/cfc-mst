@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from "styled-components"
-// import media from "../components/media"
+import media from "../components/media"
 
 import pancake from "../images/pancakeswap.png"
-// import binance from "../videos/binance-metamask.mp4"
-// import kucoin from "../videos/kucoin-trust.mp4"
+import binance from "../videos/binance-metamask.mp4"
+import kucoin from "../videos/kucoin-trust.mp4"
 
 const BuyWrap = styled.section `
     background-position: center;
@@ -59,7 +59,23 @@ const Button = styled.a`
 		color: #bada55;
 	}
 `;
-
+const Video = styled.video`
+    margin: 0 auto;
+    width: 360px;
+`
+const Tutorials = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: 48px auto;
+    max-width: 1280px;
+    ${media.tablet`
+        flex-direction: row;
+        justify-content: space-between;
+    `};
+`
+const TutorialWrap = styled.div`
+    width: 300px;
+`
 
 export default function Buy() {
     return (
@@ -73,10 +89,19 @@ export default function Buy() {
             </Frame>
             <ContractID>CFC Coin Address:<br />
             <span>0xb3e2619dC65530585D1dC2F3CCbcce0fDE9e2EE9</span></ContractID>
-            {/* <video videoSrcUrl={kucoin} /> */}
             <CallToAction>
                 <Button href="https://exchange.pancakeswap.finance/#/swap" target="_blank" rel="noreferrer">Buy on PancakeSwap</Button>
             </CallToAction>
+            <Tutorials>
+                <TutorialWrap>
+                    <ContractID>KuCoin Dex to Trust Wallet</ContractID>
+                    <Video width="540px" controls><source src={kucoin} type="video/mp4" /></Video>
+                </TutorialWrap>
+                <TutorialWrap>
+                    <ContractID>Binance Dex to Metamask Wallet</ContractID>
+                    <Video width="540px" controls><source src={binance} type="video/mp4" /></Video>
+                </TutorialWrap>
+            </Tutorials>
         </BuyWrap>
     )
 }
