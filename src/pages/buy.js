@@ -77,11 +77,11 @@ const Button = styled.a`
 		color: #bada55;
 	}
 `;
-const SwapLink = styled.a`
-    color: magenta;
-    margin: 24px auto 0 auto;
-    text-decoration: underline;
-`
+// const SwapLink = styled.a`
+//     color: magenta;
+//     margin: 24px auto 0 auto;
+//     text-decoration: underline;
+// `
 const Video = styled.video`
     margin: 0 auto;
     height: 160px;
@@ -116,7 +116,7 @@ export default function Buy() {
             <CallToAction>
                 <Button href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xFc424075fDcfBCCD18DcB90aFC48D57B1F0e6fF6" target="_blank" rel="noreferrer">Buy on PancakeSwap</Button>
             </CallToAction>
-            <SwapLink href="/swap">Swap Old CFC</SwapLink>
+            {/* <SwapLink href="/swap">Swap Old CFC</SwapLink> */}
             <Tutorials>
                 <TutorialWrap>
                     <TutorialTitle>KuCoin Dex to Trust Wallet</TutorialTitle>
