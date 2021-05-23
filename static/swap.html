@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	* {
+		box-sizing: border-box;
+	}
+	body {
+		background: #000;
+		color: white;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 1.1em;
+		width: 100%;
+	}
+	.container {
+		margin: 0 auto;
+		width: 100%;
+		max-width: 300px;
+	}
+	h1 {
+		font-size: 1.5em;
+		text-align: center;
+		width: 100%;
+	}
+	.logoIMG {
+		margin: 0 auto;
+		width: 100%;
+		max-width: 300px;
+	}
+	.connectBTN {
+		background: cyan;
+		border: none;
+		border-radius: 6px;
+		font-size: 1.2em;
+		padding: 8px 16px;
+		width: 100%;
+	}
+	.inputLabel {
+		text-align: center;
+	}
+	.numberinput {
+		background: white;
+		border: 1px solid #ccc;
+		border-radius: 6px;
+		margin: 8px auto 16px auto;
+		padding: 8px 16px;
+		width: 100%;
+	}
+	.swapBTN {
+		background: magenta;
+		border: none;
+		border-radius: 6px;
+		font-size: 1.2em;
+		padding: 8px 16px;
+		width: 100%;
+	}
+</style>
+<script src="./web3.min.js"></script>
+<script>
+const testnet = `https://kovan.infura.io/v3/3b277634edfb4e04b42f16e2ab8e1744`;
+var web3 = new Web3(new Web3.providers.HttpProvider(testnet));
+
+var tokenABI=[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "value",
+				"type": "uint256"
+			}
+		],
+		"name": "Approval",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "previousOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipTransferred",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "tokensSwapped",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "ethReceived",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "tokensIntoLiqudity",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "contractTokenBalance",
+				"type": "uint256"
+			}
+		],
+		"name": "SwapAndLiquify",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "value",
+				"type": "uint256"
+			}
+		],
+		"name": "Transfer",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "spender",
+				"type": "address"
+			}
+		],
+		"name": "allowance",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "approve",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "account",
+				"type": "address"
+			}
+		],
+		"name": "balanceOf",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "decimals",
+		"outputs": [
+			{
+				"internalType": "uint8",
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "subtractedValue",
+				"type": "uint256"
+			}
+		],
+		"name": "decreaseAllowance",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getTime",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getUnlockTime",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "addedValue",
+				"type": "uint256"
+			}
+		],
+		"name": "increaseAllowance",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "time",
+				"type": "uint256"
+			}
+		],
+		"name": "lock",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "name",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "pcsV2Pair",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "pcsV2Router",
+		"outputs": [
+			{
+				"internalType": "contract IPancakeRouter02",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "tAmount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "deductTransferFee",
+				"type": "bool"
+			}
+		],
+		"name": "reflectionFromToken",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "taxFee",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "liqFee",
+				"type": "uint256"
+			}
+		],
+		"name": "setFee",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "symbol",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "rAmount",
+				"type": "uint256"
+			}
+		],
+		"name": "tokenFromReflection",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "totalFees",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "totalSupply",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "recipient",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "transfer",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "sender",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "recipient",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "transferFrom",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "unlock",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"stateMutability": "payable",
+		"type": "receive"
+	}
+];
+var swapAPI = [
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "oldTokenAddr",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "newTokenAddr",
+				"type": "address"
+			}
+		],
+		"name": "swapOldToNewToken",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "oldTokenAddr",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "newTokenAddr",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "addrFrom",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "addrTo",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "TransferOld",
+		"type": "event"
+	}
+]
+//token contracts
+var oldCFC_Addr = "0xA288D1A745F890F7E61280f286DdcC0D5a5FDF9e";
+var newCFC_Addr = "0xFc424075fDcfBCCD18DcB90aFC48D57B1F0e6fF6";
+var swap_Addr = "0x456e2c6e52e20FB9B91B4c9FbE9A63481Fcd34A4";
+
+var old_Contract= new web3.eth.Contract(tokenABI,oldCFC_Addr);
+var new_Contract= new web3.eth.Contract(tokenABI,newCFC_Addr);
+var swap_Contract = new web3.eth.Contract(swapAPI,swap_Addr);
+
+
+function connectwallet(){
+console.log("connect");
+window.ethereum.enable();
+	if (window.ethereum) {
+		window.ethereum.enable();
+		}
+}
+
+async function swaping() {
+  	swapexactTokenforToken();
+}
+
+async function swapexactTokenforToken(){	
+	
+	var amount = parseInt(document.forms["swap"]["amount"].value.trim());	
+	if (isNaN(amount)){
+		alert('please input correct amount!');
+	}
+	amount *= 100000000;
+
+	//approve token
+	var Data=await old_Contract.methods.approve(swap_Addr,amount.toString()).encodeABI();
+	var Txdetail = {
+				from: window.ethereum.selectedAddress,
+				to: oldCFC_Addr,
+				value: web3.utils.toHex(web3.utils.toWei("0")),
+				gas: web3.utils.toHex(3000000),
+				gasPrice: web3.utils.toHex(web3.utils.toWei('10', 'gwei')),
+				data:Data
+			}
+
+	window.ethereum.request({ method: 'eth_sendTransaction', params: [Txdetail] }).then(async (res) => {
+		console.log(res);
+		var ethFlag = true;
+		while(ethFlag){
+			await web3.eth.getTransactionReceipt(res,async (error, receipt) => {
+				if (error) {
+					console.log(error)
+				} else if (receipt == null) {
+						console.log("repeat")
+				} else {
+					console.log("confirm", receipt)
+					ethFlag = false;
+					
+					console.log(amount.toString(),window.ethereum.selectedAddress);
+					var Data=await swap_Contract.methods.swapOldToNewToken(amount.toString(), oldCFC_Addr, newCFC_Addr).encodeABI();
+					
+					var Txdetail = {
+								from: window.ethereum.selectedAddress,
+								to: swap_Addr,
+								value: web3.utils.toHex("0"),
+								gas: web3.utils.toHex(3000000),
+								gasPrice: web3.utils.toHex(web3.utils.toWei('10', 'gwei')),
+								data:Data
+							}
+					window.ethereum.request({ method: 'eth_sendTransaction', params: [Txdetail] }).then(async (res) => {
+						console.log(res);
+						var ethFlag = true;
+						while(ethFlag){
+							await web3.eth.getTransactionReceipt(res, (error, receipt) => {
+								if (error) {
+									console.log(error)
+									alert("conversion failed");
+								} else if (receipt == null) {
+										console.log("repeat")
+								} else {
+									console.log("confirm", receipt);
+									//alert("conversion success");
+									ethFlag = false;
+								}
+							});
+							}
+					});
+			
+			}
+		})
+	}
+		
+	});
+
+}
+
+</script>
+</head>
+<body>
+	<div class="container">
+		<img class="logoIMG" src="logo-big.png" alt="CFC Logo" />
+		<h1>Swap Old CFC for New</h1>
+		<div class="connectwallet">
+			<button onclick="connectwallet()" value="connectwallet" class="connectBTN">Connect Wallet</button>
+		</div>
+		<div class="swap" style="padding-top: 30px;">
+			<form name="swap">
+				<div>
+					<div class="inputLabel">How many CFC are you swapping?</div>
+					<input type="number" step="0.01" name="amount" class="numberinput" />
+				</div>		
+				<button type="button" onclick="swaping()" class="swapBTN" >Swap CFC</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

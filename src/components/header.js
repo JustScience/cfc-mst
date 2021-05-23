@@ -58,24 +58,24 @@ const Nav = styled.nav`
   align-items: flex-end;
   margin: 0 auto;
 `
-const NavLink = styled.button`
-  background: rgba(0,0,0,0.75);
-  border: none;
-  border-radius: 6px;
-  color: darkslateblue;
-  cursor: pointer;
-  font-size: .9em;
-  margin: 0 2px;
-  mix-blend-mode: difference;
-  padding: 8px 12px;
-  text-decoration: none;
-  text-shadow: 0 1px 12px rgba(0,0,0,0.9);
-  transition: color 300ms ease-in-out;
+// const NavLink = styled.button`
+//   background: rgba(0,0,0,0.75);
+//   border: none;
+//   border-radius: 6px;
+//   color: darkslateblue;
+//   cursor: pointer;
+//   font-size: .9em;
+//   margin: 0 2px;
+//   mix-blend-mode: difference;
+//   padding: 8px 12px;
+//   text-decoration: none;
+//   text-shadow: 0 1px 12px rgba(0,0,0,0.9);
+//   transition: color 300ms ease-in-out;
 
-  &:hover {
-    color: pink;
-  }
-`
+//   &:hover {
+//     color: pink;
+//   }
+// `
 const Button = styled.a`
 	border: 3px solid #bada55;
 	border-radius: 10px;

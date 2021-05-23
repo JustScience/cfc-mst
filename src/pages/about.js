@@ -80,7 +80,7 @@ export default function About() {
             <SectionInfoWrap>
                 <SectionTitle>About CFC</SectionTitle>
                 <Text>
-                    ClubFunCoin was developed with the intention of providing music festivals with a fast, simple means of holding ticket presales and distributing merchandise at events. CFC will be donating to charities focusing their efforts on educating children in poverty-stricken areas on technology and business. These donations will be performed bi-weekly over livestream. ClubFunCoin encourages fun and a positive existence all around. CFC aims to promote people carving out their own path, enabling their own success, all while being exactly who they want to be.
+                    ClubFunCoin was developed with the intention of providing music festivals with a fast, simple means of holding ticket presales and distributing merchandise at events. ClubFunCoin encourages fun and a positive existence all around. CFC aims to promote people carving out their own path, enabling their own success, all while being exactly who they want to be.
                 </Text>
             </SectionInfoWrap>
         </AboutWrap>

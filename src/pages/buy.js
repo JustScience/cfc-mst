@@ -6,6 +6,7 @@ import pancake from "../images/pancakeswap.png"
 import buy from "../images/buy.jpg"
 import binance from "../videos/binance-metamask.mp4"
 import kucoin from "../videos/kucoin-trust.mp4"
+import { Link } from 'gatsby'
 
 const BuyWrap = styled.section `
     background-position: center;
@@ -76,9 +77,15 @@ const Button = styled.a`
 		color: #bada55;
 	}
 `;
+const SwapLink = styled.a`
+    color: magenta;
+    margin: 24px auto 0 auto;
+    text-decoration: underline;
+`
 const Video = styled.video`
     margin: 0 auto;
-    width: 300px;
+    height: 160px;
+    max-width: 300px;
 `
 const Tutorials = styled.div`
     display: flex;
@@ -105,10 +112,11 @@ export default function Buy() {
                 />
             </Frame>
             <ContractID>CFC Contract Address:<br />
-            <span>0xb3e2619dC65530585D1dC2F3CCbcce0fDE9e2EE9</span></ContractID>
+            <span>0xFc424075fDcfBCCD18DcB90aFC48D57B1F0e6fF6</span></ContractID>
             <CallToAction>
-                <Button href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xb3e2619dC65530585D1dC2F3CCbcce0fDE9e2EE9" target="_blank" rel="noreferrer">Buy on PancakeSwap</Button>
+                <Button href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xFc424075fDcfBCCD18DcB90aFC48D57B1F0e6fF6" target="_blank" rel="noreferrer">Buy on PancakeSwap</Button>
             </CallToAction>
+            <SwapLink href="/swap">Swap Old CFC</SwapLink>
             <Tutorials>
                 <TutorialWrap>
                     <TutorialTitle>KuCoin Dex to Trust Wallet</TutorialTitle>
