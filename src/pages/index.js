@@ -15,6 +15,7 @@ import Roadmap from "./roadmap"
 import Tokenomics from "./tokenomics"
 import Founder from "./founder"
 import CoFounder from "./cofounder"
+import Join from "./join"
 import Contact from "./contact"
 
 // styles
@@ -41,6 +42,7 @@ const IndexPage = () => {
       <Roadmap />
       <Founder />
       <CoFounder />
+      <Join />
       <Contact />
 
       <Footer />

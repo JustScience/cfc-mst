@@ -54,14 +54,14 @@ export default function Tokenomics() {
                 <MetricTag>
                     <Icon shape="tag" color="cyan" size="90px" />
                     Current Price: 
-                    <span> $0.00000334425</span>
+                    <span>~ $0.00000558733</span>
                 </MetricTag>
             </ListItem>
             <ListItem>
                 <MetricTag>
                     <Icon shape="wallet" color="cyan" size="90px" />
                     Market Cap: 
-                    <span> $668,000</span>
+                    <span>~ $1,117,466</span>
                 </MetricTag>
             </ListItem>
             <ListItem>
