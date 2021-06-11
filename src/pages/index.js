@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Helmet } from 'react-helmet'
 import styled from "styled-components"
 import "../styles/global.css"
 
@@ -29,25 +30,33 @@ const Page = styled.main`
 // markup
 const IndexPage = () => {
   return (
-    <Page>
-      <Header />
-      <Fullscreen>
-        <Hero />
-        <Feature />
-      </Fullscreen>
+    <>
+      <Helmet>
+        <title>CFC | Club Fun Coin | Nightlife Crypto for Live Music Events | NFT Collectible Event Tickets</title>
+        <meta name="description" content="CFC | Club Fun Coin. Nightlife Crypto for Live Music Events. NFT Collectible Event Tickets" />
+        <meta name="keywords" content="Crypto NFT Collectible Concert Tickets" />
+      </Helmet>
 
-      <About />
-      <Buy />
-      <Tokenomics />
-      <Roadmap />
-      <Founder />
-      <CoFounder />
-      <Join />
-      <Contact />
+      <Page>
+        <Header />
+        <Fullscreen>
+          <Hero />
+          <Feature />
+        </Fullscreen>
 
-      <Footer />
-      {/* <ResponsiveGuide /> */}
-    </Page>
+        <About />
+        <Buy />
+        <Tokenomics />
+        <Roadmap />
+        <Founder />
+        <CoFounder />
+        <Join />
+        <Contact />
+
+        <Footer />
+        {/* <ResponsiveGuide /> */}
+      </Page>
+    </>
   )
 }
 

@@ -3,6 +3,7 @@ module.exports = {
     title: "Club Fun Coin",
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     "gatsby-plugin-styled-components",
     "gatsby-plugin-sharp",
     {

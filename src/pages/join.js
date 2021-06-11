@@ -31,7 +31,7 @@ export default function Join() {
     return (
         <JoinWrap>
             <SectionTitle>Join the Club</SectionTitle>
-            <SocialLink href="https://discord.gg/D9pukFdn">Discord</SocialLink>
+            <SocialLink href="https://discord.gg/ASxhvT9zPn">Discord</SocialLink>
             <SocialLink href="https://t.me/ClubFunCoin">Telegram</SocialLink>
             <SocialLink href="https://www.instagram.com/clubfuncoin/">Instagram</SocialLink>
             <SocialLink href="https://twitter.com/clubfuncoin">Twitter</SocialLink>
