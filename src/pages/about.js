@@ -65,6 +65,28 @@ const Picture = styled.img`
     width: 100%;
     max-width: 100%;
 `
+const CallToAction = styled.div`
+    margin: 0 auto;
+    text-align: center;
+`
+const Button = styled.a`
+	border: 3px solid #bada55;
+	border-radius: 10px;
+	color: cyan;
+	cursor: pointer;
+    font-size: 1.2em;
+	margin: 0;
+	padding: 8px 20px;
+	transition: all 360ms ease-in-out;
+
+	&:hover {
+        border-color: magenta;
+		color: #bada55;
+	}
+`;
+const Spacer = styled.div`
+    height: 30px;
+`
 
 export default function About() {
     return (
@@ -80,9 +102,20 @@ export default function About() {
             <SectionInfoWrap>
                 <SectionTitle>About CFC</SectionTitle>
                 <Text>
-                    ClubFunCoin was developed with the intention of providing music festivals with a fast, simple means of holding ticket presales and distributing merchandise at events. ClubFunCoin encourages fun and a positive existence all around. CFC aims to promote people carving out their own path, enabling their own success, all while being exactly who they want to be.
+                    Ticketing has always been an expensive process, prone to scams and authenticity issues. NFTs offer solutions for all of these issues and more. Many have come to know NFTs in recent months for their applications in the art world, but as NFTs can represent any form of unique information, it is only a matter of time before their use spreads to other industries.
                 </Text>
-            </SectionInfoWrap>
+                <Text>
+                    Music artists can make use of NFTs to manage ticket sales themselves, setting the price their fans will pay and keeping all of the profits. Artists attach unique artwork to the tickets, giving them collectible value after events take place. As more and more music artists develop an understanding of NFTs, us developers can start using those NFTs in new innovative ways to improve and simplify pre-existing ticketing methods. Blockchain technology will cost less and provide better security, while adding a social aspect that will keep fans engaged long after events are held, with an easy to use platform. You can read more about the project and what we have planned in our whitepaper!
+                </Text>
+                <Spacer />
+                <CallToAction>
+                    <Button href="/ClubFunCoin_Whitepaper.pdf" target="_blank" rel="noreferrer">Read the Whitepaper</Button>
+                </CallToAction>
+                <br />
+                <CallToAction>
+                    <Button href="https://discord.gg/ASxhvT9zPn" target="_blank" rel="noreferrer">Join our Discord</Button>
+                </CallToAction>
+        </SectionInfoWrap>
         </AboutWrap>
     )
 }

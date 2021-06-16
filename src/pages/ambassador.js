@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from "styled-components"
 import media from "../components/media"
-import cofounder from "../images/founder-tim.jpg"
+import ambassador from "../images/ambassador-david.jpg"
 // import wall from "../images/brick-wall.jpg"
 
-const CoFounderWrap = styled.section`
+const AmbassadorWrap = styled.section`
     align-items: center;
     background-position: center;
     background-repeat: none;
@@ -73,24 +73,24 @@ const Picture = styled.img`
     max-width: 100%;
 `
 
-export default function CoFounder() {
+export default function Ambassador() {
     return (
-        <CoFounderWrap>
+        <AmbassadorWrap>
             <SectionImage>
                 <Frame>
                     <Picture
                         alt="CFC Founding Member"
-                        src={cofounder}
+                        src={ambassador}
                     />
                 </Frame>
             </SectionImage>
             <SectionInfoWrap>
                 <SectionTitle>Founding Member</SectionTitle>
                 <Text>
-                    <strong>Timothy Demry</strong> is an optimistic Bay Area native and cryptocurrency enthusiast. Demry was raised in a single parent household and became the first in his family to graduate from college, all while working closely with Teach for America. Demry has a strong background in real estate and spends much of his time working to help impoverished communities.
+                    <strong>David Guevara</strong> is a music artist and cryptocurrency entrepreneur based in New York City. Guevara will be reaching out to artists, studios, managers, producers, event planners, and many other professionals in the music industry to expand the vision and utility of ClubFunCoin. 
                 </Text>
-                <a href="https://www.linkedin.com/in/timothy-demry-16ab71123/" target="_blank" rel="noreferrer" >Timothy Demry on LinkedIn</a>
+                <a href="https://www.linkedin.com/in/sayten89/" target="_blank" rel="noreferrer" >David Guevara on LinkedIn</a>
             </SectionInfoWrap>
-        </CoFounderWrap>
+        </AmbassadorWrap>
     )
 }

@@ -34,7 +34,7 @@ const Text = styled.p`
 export default function Feature() {
     return (
         <FeatureWrap>
-            <Text><strong>Club<span>Fun</span>Coin</strong> is a new cryptocurrency on the Binance Smart Chain aimed at facilitating transactions for music festivals all over the world—all while making regular donations to charity. Welcome to the CLUB.</Text>
+            <Text><strong>Club<span>Fun</span>Coin</strong> (CFC) is a utility token developed to support the ClubFunCoin Smart Ticket System - an NFT marketplace enabling artists in the music industry to take full control over their ticket sales, all while providing fans with unique, collectible memories to hold or trade after events. Welcome to the CLUB.</Text>
         </FeatureWrap>
     )
 }

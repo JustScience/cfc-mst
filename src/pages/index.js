@@ -16,6 +16,7 @@ import Roadmap from "./roadmap"
 import Tokenomics from "./tokenomics"
 import Founder from "./founder"
 import CoFounder from "./cofounder"
+import Ambassador from "./ambassador"
 import Join from "./join"
 import Contact from "./contact"
 
@@ -50,6 +51,7 @@ const IndexPage = () => {
         <Roadmap />
         <Founder />
         <CoFounder />
+        <Ambassador />
         <Join />
         <Contact />
 

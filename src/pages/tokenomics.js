@@ -4,6 +4,7 @@ import media from "../components/media"
 import Icon from "../components/icon"
 
 const TokenomicsWrap = styled.section `
+    align-items: center;
     background-position: center;
     background-repeat: none;
     background-size: cover;
@@ -44,47 +45,90 @@ const MetricTag = styled.div`
     flex-direction: column;
     justify-content: flex-start;
 `
+const SectionInfoWrap = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 540px;
+    ${media.tablet`
+        margin: 0;
+    `};
+`
+const Text = styled.p`
+    color: #bada55;
+    margin: 0 auto;
+    font-weight: 500;
+    text-align: left;
+    text-shadow: 1px 4px 4px rgba(0,0,0,0.9);
+
+    strong {color:white;}
+    span {color:cyan;}
+`
+const Spacer = styled.div`
+    height: 30px;
+`
+const Bullet = styled.li`
+    padding-bottom: 12px;
+`
 
 export default function Tokenomics() {
     return (
         <TokenomicsWrap>
             <SectionTitle>Tokenomics</SectionTitle>
             <List>
-            <ListItem>
-                <MetricTag>
-                    <Icon shape="tag" color="cyan" size="90px" />
-                    Current Price: 
-                    <span>$0.00000459959</span>
-                </MetricTag>
-            </ListItem>
-            <ListItem>
-                <MetricTag>
-                    <Icon shape="wallet" color="cyan" size="90px" />
-                    Market Cap: 
-                    <span>$459,959</span>
-                </MetricTag>
-            </ListItem>
-            <ListItem>
-                <MetricTag>
-                    <Icon shape="group" color="cyan" size="90px" />
-                    Holders: 
-                    <span>700</span>
-                </MetricTag>
-            </ListItem>
-            <ListItem>
-                <MetricTag>
-                    <Icon shape="infinity" color="cyan" size="90px" />
-                    Supply: 
-                    <span>100,000,000,000</span>
-                </MetricTag>
-            </ListItem>
-            {/* <ListItem> */}
-                {/* <MetricTag> */}
-                    {/* Locked Liquidity Pool:  */}
-                    {/* <span>$30,280</span> */}
-                {/* </MetricTag> */}
-            {/* </ListItem> */}
+                <ListItem>
+                    <MetricTag>
+                        <Icon shape="tag" color="cyan" size="90px" />
+                        Current Price: 
+                        <span>$0.00000459959</span>
+                    </MetricTag>
+                </ListItem>
+                <ListItem>
+                    <MetricTag>
+                        <Icon shape="wallet" color="cyan" size="90px" />
+                        Market Cap: 
+                        <span>$459,959</span>
+                    </MetricTag>
+                </ListItem>
+                <ListItem>
+                    <MetricTag>
+                        <Icon shape="group" color="cyan" size="90px" />
+                        Holders: 
+                        <span>700</span>
+                    </MetricTag>
+                </ListItem>
+                <ListItem>
+                    <MetricTag>
+                        <Icon shape="infinity" color="cyan" size="90px" />
+                        Supply: 
+                        <span>100,000,000,000</span>
+                    </MetricTag>
+                </ListItem>
+                {/* <ListItem> */}
+                    {/* <MetricTag> */}
+                        {/* Locked Liquidity Pool:  */}
+                        {/* <span>$30,280</span> */}
+                    {/* </MetricTag> */}
+                {/* </ListItem> */}
             </List>
+            <Spacer />
+            <SectionInfoWrap>
+                <Text>
+                    ClubFunCoin is a non-profit and therefore automatically imposes a fee of 10% for all transactions with CFC. This tax serves to reduce volatility and keep value in the coin, all while rewarding existing holders. This tax is divided between two simple functions: reflection and LP acquisition. The details of these functions are outlined below:
+                </Text>
+                <ul>
+                    <Bullet>
+                        <Text>
+                            Reflection - 2% redistributed to the community on that exchange, proportional to the tokens that they hold. This system incentivizes our community of holders who in turn support ClubFunCoin, helping make the project sustainable in the long-term. The fees collected are disbursed across the exchange they were collected on. For CFC holders on a centralized exchange, their tokens will be snapshotted daily, and an averaged reward will be disbursed on the 1st of every month.
+                        </Text>
+                    </Bullet>
+                    <Bullet>
+                        <Text>
+                            LP Acquisition - 8% is transferred back as liquidity provider tokens to the PancakeSwap Liquidity Pool (LP). This ensures that as the project progresses, there will be sufficient liquidity to sustain increases in trading volume. Half of this tax is sold by the contract into BNB, while the other half of the CFC is paired automatically with the previously mentioned BNB and added as a liquidity pair on PancakeSwap.
+                        </Text>
+                    </Bullet>
+                </ul>
+            </SectionInfoWrap>
         </TokenomicsWrap>
     )
 }
