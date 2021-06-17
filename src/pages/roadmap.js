@@ -30,6 +30,11 @@ const ListItem = styled.ul`
     padding: 0;
 
     span {font-size: 1.5em;line-height:3;}
+
+    &.checked:before {
+        color: magenta;
+        content: '✓ ';
+    }
 `
 
 export default function Roadmap() {
@@ -37,52 +42,50 @@ export default function Roadmap() {
         <RoadmapWrap>
             <SectionTitle>Roadmap</SectionTitle>
             <List>
-                <ListItem><span>May</span>
+                <ListItem className="checked"><span>Phase 1</span>
                     <List>
-                        <ListItem>Pre-Sale - 11 May 2021</ListItem>
-                        <ListItem>Token Launch - 16 May 2021
+                        <ListItem className="checked">Launch ClubFunCoin ($CFC) on the Binance Smart Chain</ListItem>
+                        <ListItem className="checked">Launch clubfuncoin.com</ListItem>
+                        <ListItem className="checked">Twitter giveaways</ListItem>
+                        <ListItem className="checked">Release whitepaper</ListItem>
+                        <ListItem className="checked">Submit to Certik for official audit</ListItem>
+                        <ListItem className="checked">Launch ClubFunCoin ($CFC) on the Binance Smart Chain</ListItem>
+                        <ListItem className="checked">Submit to Token Trackers
                             <List>
-                                <ListItem>-- Liquidity Pool Locked</ListItem>
+                                <ListItem>-- CoinGecko</ListItem>
+                                <ListItem>-- CoinMarketCap</ListItem>
                             </List>
                         </ListItem>
-                        <ListItem>Certik Audit submitted and in Progress</ListItem>
-                        <ListItem>Submit to Major Exchanges and Token Trackers
+                        <ListItem className="checked">Submit to Exchanges
                             <List>
-                                <ListItem>-- Binance</ListItem>
-                                <ListItem>-- CoinMarketCap</ListItem>
-                                <ListItem>-- CoinGecko</ListItem>
                                 <ListItem>-- WhiteBit</ListItem>
                                 <ListItem>-- BitMart</ListItem>
+                                <ListItem>-- FTX</ListItem>
                             </List>
                         </ListItem>
-                        <ListItem>Marketing &amp; Promotions
-                            <List>
-                                <ListItem>-- Targeted Advertisements</ListItem>
-                                <ListItem>-- Los Angeles &amp; Bay Area CFC Billboards</ListItem>
-                                <ListItem>-- Social Media - Influencers/Creators</ListItem>
-                                <ListItem>-- Music Industry Related</ListItem>
-                            </List>
-                        </ListItem>
-                        {/* <ListItem>First Donation Livestream</ListItem> */}
                     </List>
                 </ListItem>
-                <ListItem><span>June</span>
+                <ListItem><span>Phase 2</span>
                     <List>
-                        <ListItem>Marketing &amp; Promotions
+                        <ListItem>Release the Smart Ticket System on clubfuncoin.com</ListItem>
+                        <ListItem>Merchandise sales through CFC</ListItem>
+                        <ListItem>Approach artists interested in collaborating for first ticket sales</ListItem>
+                        <ListItem>Targeted promotions on Instagram, Facebook, and Youtube</ListItem>
+                        <ListItem>Submit to Major Exchanges
                             <List>
-                                <ListItem>-- Targeted Advertisements</ListItem>
-                                <ListItem>-- Social Media - Influencers/Creators</ListItem>
-                                <ListItem>-- Music Industry Related</ListItem>
+                                <ListItem>-- KuCoin</ListItem>
+                                <ListItem>-- Binance</ListItem>
                             </List>
                         </ListItem>
-                        <ListItem>Merchandise Rollout</ListItem>
-                        {/* <ListItem>Second Donation Livestream</ListItem>
-                        <ListItem>Third Donation Livestream</ListItem> */}
-                        <ListItem>Music Festival Collaboration
-                            <List>
-                                <ListItem>-- Currently speaking with Rolling Loud for 2022</ListItem>
-                            </List>
-                        </ListItem>
+                    </List>
+                </ListItem>
+                <ListItem><span>Phase 3</span>
+                    <List>
+                        <ListItem>Approach larger venues</ListItem>
+                        <ListItem>Market the Smart Ticket System to the music industry</ListItem>
+                        <ListItem>Celebrity promotions in the music industry</ListItem>
+                        <ListItem>Create a social platform for fans to view and share the NFTs they and others have collected</ListItem>
+                        <ListItem>Launch a seat selection system for venues offering reserved seating</ListItem>
                     </List>
                 </ListItem>
             </List>

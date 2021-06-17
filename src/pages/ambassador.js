@@ -85,7 +85,7 @@ export default function Ambassador() {
                 </Frame>
             </SectionImage>
             <SectionInfoWrap>
-                <SectionTitle>Founding Member</SectionTitle>
+                <SectionTitle>Music Industry Ambassador</SectionTitle>
                 <Text>
                     <strong>David Guevara</strong> is a music artist and cryptocurrency entrepreneur based in New York City. Guevara will be reaching out to artists, studios, managers, producers, event planners, and many other professionals in the music industry to expand the vision and utility of ClubFunCoin. 
                 </Text>

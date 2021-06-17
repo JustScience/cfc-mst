@@ -13,12 +13,16 @@ const FeatureWrap = styled.section`
     width: 100%;
 `
 const Text = styled.p`
+    background-color: rgba(0,0,0,0.36);
+    backdrop-filter: blur(3px);
+    border-radius: 24px;
     color: #bada55;
     font-weight: 500;
     text-align: center;
     text-shadow: 1px 4px 4px rgba(0,0,0,0.9);
     margin: 0 auto;
-    max-width: 450px;
+    max-width: 540px;
+    padding: 24px;
 
     strong {color:white;}
     span {color:cyan;}
