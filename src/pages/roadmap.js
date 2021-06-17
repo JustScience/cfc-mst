@@ -35,6 +35,12 @@ const ListItem = styled.ul`
         color: magenta;
         content: '✓ ';
     }
+
+    em {
+        color: magenta;
+        font-size: .75em;
+        font-weight: 300;
+    }
 `
 
 export default function Roadmap() {
@@ -42,7 +48,7 @@ export default function Roadmap() {
         <RoadmapWrap>
             <SectionTitle>Roadmap</SectionTitle>
             <List>
-                <ListItem className="checked"><span>Phase 1</span>
+                <ListItem className="checked"><span>Phase 1 <em>(complete)</em></span>
                     <List>
                         <ListItem className="checked">Launch ClubFunCoin ($CFC) on the Binance Smart Chain</ListItem>
                         <ListItem className="checked">Launch clubfuncoin.com</ListItem>
@@ -52,15 +58,14 @@ export default function Roadmap() {
                         <ListItem className="checked">Launch ClubFunCoin ($CFC) on the Binance Smart Chain</ListItem>
                         <ListItem className="checked">Submit to Token Trackers
                             <List>
-                                <ListItem>-- CoinGecko</ListItem>
-                                <ListItem>-- CoinMarketCap</ListItem>
+                                <ListItem className="checked">-- CoinGecko</ListItem>
+                                <ListItem className="checked">-- CoinMarketCap</ListItem>
                             </List>
                         </ListItem>
                         <ListItem className="checked">Submit to Exchanges
                             <List>
-                                <ListItem>-- WhiteBit</ListItem>
-                                <ListItem>-- BitMart</ListItem>
-                                <ListItem>-- FTX</ListItem>
+                                <ListItem className="checked">-- WhiteBit</ListItem>
+                                <ListItem className="checked">-- BitMart</ListItem>
                             </List>
                         </ListItem>
                     </List>
