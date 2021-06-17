@@ -55,7 +55,7 @@ const SectionTitle = styled.h3`
 const Text = styled.p`
     color: #bada55;
     font-weight: 500;
-    text-align: center;
+    text-align: justify;
     text-shadow: 1px 4px 4px rgba(0,0,0,0.9);
     ${media.tablet`
         text-align: left;
@@ -72,6 +72,22 @@ const Picture = styled.img`
     width: 100%;
     max-width: 100%;
 `
+const Button = styled.a`
+	border: 3px solid cyan;
+	border-radius: 10px;
+	color: magenta;
+	cursor: pointer;
+    font-size: 1.2em;
+	margin: 36px auto 0 auto;
+	padding: 8px 20px;
+    text-align: center;
+	transition: all 360ms ease-in-out;
+
+	&:hover {
+        border-color: magenta;
+		color: #bada55;
+	}
+`;
 
 export default function CoFounder() {
     return (
@@ -89,7 +105,7 @@ export default function CoFounder() {
                 <Text>
                     <strong>Timothy Demry</strong> is an optimistic Bay Area native and cryptocurrency enthusiast. Demry was raised in a single parent household and became the first in his family to graduate from college, all while working closely with Teach for America. Demry has a strong background in real estate and spends much of his time working to help impoverished communities.
                 </Text>
-                <a href="https://www.linkedin.com/in/timothy-demry-16ab71123/" target="_blank" rel="noreferrer" >Timothy Demry on LinkedIn</a>
+                <Button href="https://www.linkedin.com/in/timothy-demry-16ab71123/" target="_blank" rel="noreferrer" >Timothy Demry on LinkedIn</Button>
             </SectionInfoWrap>
         </CoFounderWrap>
     )

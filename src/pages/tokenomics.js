@@ -56,10 +56,12 @@ const SectionInfoWrap = styled.div`
 `
 const Text = styled.p`
     color: #bada55;
-    margin: 0 auto;
     font-weight: 500;
-    text-align: left;
+    text-align: justify;
     text-shadow: 1px 4px 4px rgba(0,0,0,0.9);
+    ${media.tablet`
+        text-align: left;
+    `};
 
     strong {color:white;}
     span {color:cyan;}
@@ -80,14 +82,14 @@ export default function Tokenomics() {
                     <MetricTag>
                         <Icon shape="tag" color="cyan" size="90px" />
                         Current Price: 
-                        <span>$0.00000459959</span>
+                        <span>$0.00000395141</span>
                     </MetricTag>
                 </ListItem>
                 <ListItem>
                     <MetricTag>
                         <Icon shape="wallet" color="cyan" size="90px" />
                         Market Cap: 
-                        <span>$459,959</span>
+                        <span>$395,141</span>
                     </MetricTag>
                 </ListItem>
                 <ListItem>

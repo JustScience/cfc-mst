@@ -15,6 +15,7 @@ const HeaderWrap = styled.header`
   right: 0;
   width: 100%;
   padding: 12px;
+  z-index: 9999;
 `
 const HeaderTop = styled.div`
   align-items: center;

@@ -56,7 +56,7 @@ const SectionTitle = styled.h3`
 const Text = styled.p`
     color: #bada55;
     font-weight: 500;
-    text-align: center;
+    text-align: justify;
     text-shadow: 1px 4px 4px rgba(0,0,0,0.9);
     ${media.tablet`
         text-align: left;
@@ -108,7 +108,7 @@ export default function Founder() {
                 <Text>
                     <strong>Club<span>Fun</span>Coin</strong> was envisioned and started by <strong>Jessie Grundy</strong>, a Bay Area entrepreneur with years of experience growing businesses from the ground up. Most notably, his luxury cannabis brand Peakz, which has been featured in Forbes Magazine twice in the last three years and has quickly grown to be one of the largest social equity brands in the country. Grundy went on to transition these skills into a new space, developing a first of its kind surrounding the world of NFTs - a bag of cannabis, existing only online, linked to blockchain technology. Tokened “Lava Coin,” the digital bag is legal anywhere in the world, and can be traded in for “real” cannabis in Oregon or California. Grundy continues to be an active mentor to aspiring minority business owners in the Bay Area.
                 </Text>
-                <a href="https://www.linkedin.com/in/jessie-grundy-61959741/" target="_blank" rel="noreferrer" >Jessie Grundy on LinkedIn</a>
+                <Button href="https://www.linkedin.com/in/jessie-grundy-61959741/" target="_blank" rel="noreferrer" >Jessie Grundy on LinkedIn</Button>
                 <Button href="https://www.forbes.com/sites/chrisroberts/2021/03/01/would-you-buy-digital-marijuana-blockchain-based-nfts-arrive-in-cannabis/?sh=36e07e1b30a3" target="_blank" >Jessie Grundy Forbes Interview</Button>
             </SectionInfoWrap>
         </FounderWrap>

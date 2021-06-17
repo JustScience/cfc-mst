@@ -5,7 +5,7 @@ import wall from "../images/brick-wall.jpg"
 import arrow from "../images/neon-arrow.png"
 
 const AboutWrap = styled.section`
-    align-items: center;
+    align-items: flex-start;
     background-image: url(${wall});
     background-position: center;
     background-repeat: none;
@@ -18,14 +18,21 @@ const AboutWrap = styled.section`
     padding: 90px 36px;
     width: 100%;
     ${media.tablet`
+        align-items: center;
         flex-direction: row;
         justify-content: center;
     `};
 `
 const SectionImage = styled.div`
-    height: 200px;
-    margin: 0 24px 0 0;
-    width: 150px;
+    height: 140px;
+    margin: 48px 24px 0 0;
+    width: 120px;
+
+    ${media.tablet`
+        height: 200px;
+        margin: 0 24px 0 0;
+        width: 150px;
+    `};
 `
 const SectionInfoWrap = styled.div`
     display: flex;
@@ -49,7 +56,7 @@ const SectionTitle = styled.h3`
 const Text = styled.p`
     color: #bada55;
     font-weight: 500;
-    text-align: right;
+    text-align: justify;
     text-shadow: 1px 4px 4px rgba(0,0,0,0.9);
     ${media.tablet`
         text-align: left;;
@@ -60,6 +67,10 @@ const Text = styled.p`
 `
 const Frame = styled.div`
     width: 100%;
+    
+    ${media.tablet`
+        margin: 0;
+    `};
 `
 const Picture = styled.img`
     width: 100%;

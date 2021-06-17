@@ -55,7 +55,7 @@ const SectionTitle = styled.h3`
 const Text = styled.p`
     color: #bada55;
     font-weight: 500;
-    text-align: center;
+    text-align: justify;
     text-shadow: 1px 4px 4px rgba(0,0,0,0.9);
     ${media.tablet`
         text-align: left;
@@ -72,6 +72,22 @@ const Picture = styled.img`
     width: 100%;
     max-width: 100%;
 `
+const Button = styled.a`
+	border: 3px solid cyan;
+	border-radius: 10px;
+	color: magenta;
+	cursor: pointer;
+    font-size: 1.2em;
+	margin: 36px auto 0 auto;
+	padding: 8px 20px;
+    text-align: center;
+	transition: all 360ms ease-in-out;
+
+	&:hover {
+        border-color: magenta;
+		color: #bada55;
+	}
+`;
 
 export default function Ambassador() {
     return (
@@ -89,7 +105,7 @@ export default function Ambassador() {
                 <Text>
                     <strong>David Guevara</strong> is a music artist and cryptocurrency entrepreneur based in New York City. Guevara will be reaching out to artists, studios, managers, producers, event planners, and many other professionals in the music industry to expand the vision and utility of ClubFunCoin. 
                 </Text>
-                <a href="https://www.linkedin.com/in/sayten89/" target="_blank" rel="noreferrer" >David Guevara on LinkedIn</a>
+                <Button href="https://www.linkedin.com/in/sayten89/" target="_blank" rel="noreferrer" >David Guevara on LinkedIn</Button>
             </SectionInfoWrap>
         </AmbassadorWrap>
     )

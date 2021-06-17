@@ -31,7 +31,7 @@ const ContractID = styled.p`
     color: white;
     margin: 24px auto;
     text-align: center;
-    font-size: 0.9em;
+    font-size: 0.75em;
     ${media.tablet`
         font-size: 1.5em;
     `};
